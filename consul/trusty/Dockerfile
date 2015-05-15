@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 
 RUN apt-get update \
-	&& apt-get install -y unzip wget \
+	&& apt-get install -y unzip wget
 
 RUN cd /usr/local/bin \
 	&& wget https://dl.bintray.com/mitchellh/consul/0.5.1_linux_amd64.zip \
