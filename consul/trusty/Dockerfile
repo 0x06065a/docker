@@ -14,3 +14,5 @@ RUN cd ~ \
 	&& rm *.zip
 	
 VOLUME ["/tmp/consul"]
+EXPOSE 8500 8600 8400 8301 8302
+CMD ["consul", "agent", "-server", "-bootstrap-expect 1", "-data-dir /tmp/consul", "-ui-dir /root/dist"]
