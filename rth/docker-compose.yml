@@ -1,0 +1,13 @@
+web:
+  image: 0x06065a/rth-php
+  links:
+    - db
+  ports:
+    - "80:80"
+db:
+  image: 0x06065a/rth-mysql
+  volumes:
+    - /var/lib/mysql
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    MYSQL_DATABASE: rth
